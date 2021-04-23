@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBENT_groupBox_Vhod.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="button_GBREG_CreateMasterPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 59</value>
@@ -378,7 +378,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBREG_groupBox_Register.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="button_GBADD_AddPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt, style=Bold</value>
@@ -624,6 +624,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBADD_groupBox_AddPassword.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBPASS_groupBox_Passwords.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 9</value>
+  </data>
+  <data name="GBPASS_groupBox_Passwords.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 546</value>
+  </data>
+  <data name="GBPASS_groupBox_Passwords.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="GBPASS_groupBox_Passwords.Text" xml:space="preserve">
+    <value>Записи</value>
+  </data>
+  <data name="&gt;&gt;GBPASS_groupBox_Passwords.Name" xml:space="preserve">
+    <value>GBPASS_groupBox_Passwords</value>
+  </data>
+  <data name="&gt;&gt;GBPASS_groupBox_Passwords.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBPASS_groupBox_Passwords.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GBPASS_groupBox_Passwords.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -633,7 +657,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>725, 571</value>
+    <value>725, 566</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

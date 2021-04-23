@@ -75,6 +75,8 @@ namespace Kursovaya2 {
 	private: System::Windows::Forms::TextBox^ textBox_GBADD_Nazvanie;
 
 	private: System::Windows::Forms::Label^ label_GBADD_Nazvanie;
+	private: System::Windows::Forms::GroupBox^ GBPASS_groupBox_Passwords;
+
 
 
 
@@ -113,6 +115,7 @@ namespace Kursovaya2 {
 			this->label_GBADD_Primechanie = (gcnew System::Windows::Forms::Label());
 			this->richTextBox_GBADD_Primechanie = (gcnew System::Windows::Forms::RichTextBox());
 			this->button_GBADD_AddPassword = (gcnew System::Windows::Forms::Button());
+			this->GBPASS_groupBox_Passwords = (gcnew System::Windows::Forms::GroupBox());
 			this->GBENT_groupBox_Vhod->SuspendLayout();
 			this->GBREG_groupBox_Register->SuspendLayout();
 			this->GBADD_groupBox_AddPassword->SuspendLayout();
@@ -244,10 +247,17 @@ namespace Kursovaya2 {
 			this->button_GBADD_AddPassword->Name = L"button_GBADD_AddPassword";
 			this->button_GBADD_AddPassword->UseVisualStyleBackColor = true;
 			// 
+			// GBPASS_groupBox_Passwords
+			// 
+			resources->ApplyResources(this->GBPASS_groupBox_Passwords, L"GBPASS_groupBox_Passwords");
+			this->GBPASS_groupBox_Passwords->Name = L"GBPASS_groupBox_Passwords";
+			this->GBPASS_groupBox_Passwords->TabStop = false;
+			// 
 			// MyForm
 			// 
 			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->Controls->Add(this->GBPASS_groupBox_Passwords);
 			this->Controls->Add(this->GBADD_groupBox_AddPassword);
 			this->Controls->Add(this->GBREG_groupBox_Register);
 			this->Controls->Add(this->GBENT_groupBox_Vhod);
