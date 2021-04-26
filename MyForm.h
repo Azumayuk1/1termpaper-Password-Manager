@@ -366,7 +366,7 @@ namespace Kursovaya2 {
 
 	private: System::Void button_GBREG_CreateMasterPassword_Click(System::Object^ sender, System::EventArgs^ e) {
 		textBox_GBREG_CreateMasterPassword->Text = "";
-		GBREG_groupBox_Register->Visible = false;
+		
 
 	}
 
