@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBENT_groupBox_Vhod.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="button_GBREG_CreateMasterPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 59</value>
@@ -378,7 +378,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBREG_groupBox_Register.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="button_GBADD_AddPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt, style=Bold</value>
@@ -624,13 +624,34 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBADD_groupBox_AddPassword.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="listBox_PasswordsList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="listBox_PasswordsList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 459</value>
+  </data>
+  <data name="listBox_PasswordsList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listBox_PasswordsList.Name" xml:space="preserve">
+    <value>listBox_PasswordsList</value>
+  </data>
+  <data name="&gt;&gt;listBox_PasswordsList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBox_PasswordsList.Parent" xml:space="preserve">
+    <value>GBPASS_groupBox_Passwords</value>
+  </data>
+  <data name="&gt;&gt;listBox_PasswordsList.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="GBPASS_groupBox_Passwords.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 9</value>
   </data>
   <data name="GBPASS_groupBox_Passwords.Size" type="System.Drawing.Size, System.Drawing">
-    <value>389, 546</value>
+    <value>191, 487</value>
   </data>
   <data name="GBPASS_groupBox_Passwords.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -648,6 +669,198 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBPASS_groupBox_Passwords.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Output_Console.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 502</value>
+  </data>
+  <data name="Output_Console.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 52</value>
+  </data>
+  <data name="Output_Console.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Output_Console.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Output_Console.Name" xml:space="preserve">
+    <value>Output_Console</value>
+  </data>
+  <data name="&gt;&gt;Output_Console.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Output_Console.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Output_Console.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="richTextBox_GBPASSINF_Primechanie.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 146</value>
+  </data>
+  <data name="richTextBox_GBPASSINF_Primechanie.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 162</value>
+  </data>
+  <data name="richTextBox_GBPASSINF_Primechanie.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="richTextBox_GBPASSINF_Primechanie.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextBox_GBPASSINF_Primechanie.Name" xml:space="preserve">
+    <value>richTextBox_GBPASSINF_Primechanie</value>
+  </data>
+  <data name="&gt;&gt;richTextBox_GBPASSINF_Primechanie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBox_GBPASSINF_Primechanie.Parent" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;richTextBox_GBPASSINF_Primechanie.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_GBPASSIF_Primechanie.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_GBPASSIF_Primechanie.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 126</value>
+  </data>
+  <data name="label_GBPASSIF_Primechanie.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label_GBPASSIF_Primechanie.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label_GBPASSIF_Primechanie.Text" xml:space="preserve">
+    <value>Примечание:</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSIF_Primechanie.Name" xml:space="preserve">
+    <value>label_GBPASSIF_Primechanie</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSIF_Primechanie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSIF_Primechanie.Parent" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSIF_Primechanie.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBox_GBPASSINF_Site.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 103</value>
+  </data>
+  <data name="textBox_GBPASSINF_Site.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 20</value>
+  </data>
+  <data name="textBox_GBPASSINF_Site.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Site.Name" xml:space="preserve">
+    <value>textBox_GBPASSINF_Site</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Site.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Site.Parent" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Site.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_GBPASSINF_Site.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_GBPASSINF_Site.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 85</value>
+  </data>
+  <data name="label_GBPASSINF_Site.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label_GBPASSINF_Site.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label_GBPASSINF_Site.Text" xml:space="preserve">
+    <value>Адрес сайта:</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSINF_Site.Name" xml:space="preserve">
+    <value>label_GBPASSINF_Site</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSINF_Site.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSINF_Site.Parent" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;label_GBPASSINF_Site.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GBPASSINF_button_ShowHidePassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 50</value>
+  </data>
+  <data name="GBPASSINF_button_ShowHidePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 23</value>
+  </data>
+  <data name="GBPASSINF_button_ShowHidePassword.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GBPASSINF_button_ShowHidePassword.Text" xml:space="preserve">
+    <value>Показать/Скрыть пароль</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_button_ShowHidePassword.Name" xml:space="preserve">
+    <value>GBPASSINF_button_ShowHidePassword</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_button_ShowHidePassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_button_ShowHidePassword.Parent" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_button_ShowHidePassword.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBox_GBPASSINF_Password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 21</value>
+  </data>
+  <data name="textBox_GBPASSINF_Password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 20</value>
+  </data>
+  <data name="textBox_GBPASSINF_Password.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Password.Name" xml:space="preserve">
+    <value>textBox_GBPASSINF_Password</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Password.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Password.Parent" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;textBox_GBPASSINF_Password.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GBPASSINF_groupBox_PassInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>521, 9</value>
+  </data>
+  <data name="GBPASSINF_groupBox_PassInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 321</value>
+  </data>
+  <data name="GBPASSINF_groupBox_PassInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="GBPASSINF_groupBox_PassInfo.Text" xml:space="preserve">
+    <value>Сведения</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_groupBox_PassInfo.Name" xml:space="preserve">
+    <value>GBPASSINF_groupBox_PassInfo</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_groupBox_PassInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_groupBox_PassInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GBPASSINF_groupBox_PassInfo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -655,6 +868,9 @@
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>725, 566</value>
