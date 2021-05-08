@@ -36,8 +36,5 @@
     <Image Include="icon1.ico">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="..\..\..\Desktop\key-icon.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
   </ItemGroup>
 </Project>

@@ -1,3 +1,5 @@
+#include <string>
+
 #pragma once
 
 namespace Kursovaya2 {
@@ -11,6 +13,8 @@ namespace Kursovaya2 {
 	
 	using namespace System::IO;
 
+	
+
 	/// <summary>
 	/// Сводка для MyForm
 	/// </summary>
@@ -21,9 +25,10 @@ namespace Kursovaya2 {
 		{
 			InitializeComponent();
 
-			String^ fileName = "metadata.txt";
+			
+			
 
-			StreamWriter^ sw = gcnew StreamWriter(fileName);
+			
 			//
 			//TODO: добавьте код конструктора
 			//
@@ -77,8 +82,10 @@ namespace Kursovaya2 {
 	private: System::Windows::Forms::TextBox^ textBox_GBADD_Password;
 
 	private: System::Windows::Forms::Label^ label_GBADD_Password;
+	public: System::Windows::Forms::TextBox^ textBox_GBADD_Nazvanie;
+	private:
 
-	private: System::Windows::Forms::TextBox^ textBox_GBADD_Nazvanie;
+
 
 	private: System::Windows::Forms::Label^ label_GBADD_Nazvanie;
 	private: System::Windows::Forms::GroupBox^ GBPASS_groupBox_Passwords;
@@ -131,15 +138,15 @@ namespace Kursovaya2 {
 			this->textBox_GBADD_Nazvanie = (gcnew System::Windows::Forms::TextBox());
 			this->label_GBADD_Nazvanie = (gcnew System::Windows::Forms::Label());
 			this->GBPASS_groupBox_Passwords = (gcnew System::Windows::Forms::GroupBox());
+			this->listBox_PasswordsList = (gcnew System::Windows::Forms::ListBox());
 			this->Output_Console = (gcnew System::Windows::Forms::RichTextBox());
 			this->GBPASSINF_groupBox_PassInfo = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox_GBPASSINF_Password = (gcnew System::Windows::Forms::TextBox());
-			this->GBPASSINF_button_ShowHidePassword = (gcnew System::Windows::Forms::Button());
-			this->label_GBPASSINF_Site = (gcnew System::Windows::Forms::Label());
-			this->textBox_GBPASSINF_Site = (gcnew System::Windows::Forms::TextBox());
-			this->label_GBPASSIF_Primechanie = (gcnew System::Windows::Forms::Label());
 			this->richTextBox_GBPASSINF_Primechanie = (gcnew System::Windows::Forms::RichTextBox());
-			this->listBox_PasswordsList = (gcnew System::Windows::Forms::ListBox());
+			this->label_GBPASSIF_Primechanie = (gcnew System::Windows::Forms::Label());
+			this->textBox_GBPASSINF_Site = (gcnew System::Windows::Forms::TextBox());
+			this->label_GBPASSINF_Site = (gcnew System::Windows::Forms::Label());
+			this->GBPASSINF_button_ShowHidePassword = (gcnew System::Windows::Forms::Button());
+			this->textBox_GBPASSINF_Password = (gcnew System::Windows::Forms::TextBox());
 			this->GBENT_groupBox_Vhod->SuspendLayout();
 			this->GBREG_groupBox_Register->SuspendLayout();
 			this->GBADD_groupBox_AddPassword->SuspendLayout();
@@ -233,6 +240,7 @@ namespace Kursovaya2 {
 			resources->ApplyResources(this->button_GBADD_AddPassword, L"button_GBADD_AddPassword");
 			this->button_GBADD_AddPassword->Name = L"button_GBADD_AddPassword";
 			this->button_GBADD_AddPassword->UseVisualStyleBackColor = true;
+			this->button_GBADD_AddPassword->Click += gcnew System::EventHandler(this, &MyForm::button_GBADD_AddPassword_Click);
 			// 
 			// richTextBox_GBADD_Primechanie
 			// 
@@ -281,6 +289,12 @@ namespace Kursovaya2 {
 			this->GBPASS_groupBox_Passwords->Name = L"GBPASS_groupBox_Passwords";
 			this->GBPASS_groupBox_Passwords->TabStop = false;
 			// 
+			// listBox_PasswordsList
+			// 
+			this->listBox_PasswordsList->FormattingEnabled = true;
+			resources->ApplyResources(this->listBox_PasswordsList, L"listBox_PasswordsList");
+			this->listBox_PasswordsList->Name = L"listBox_PasswordsList";
+			// 
 			// Output_Console
 			// 
 			this->Output_Console->BackColor = System::Drawing::Color::White;
@@ -299,10 +313,25 @@ namespace Kursovaya2 {
 			this->GBPASSINF_groupBox_PassInfo->Name = L"GBPASSINF_groupBox_PassInfo";
 			this->GBPASSINF_groupBox_PassInfo->TabStop = false;
 			// 
-			// textBox_GBPASSINF_Password
+			// richTextBox_GBPASSINF_Primechanie
 			// 
-			resources->ApplyResources(this->textBox_GBPASSINF_Password, L"textBox_GBPASSINF_Password");
-			this->textBox_GBPASSINF_Password->Name = L"textBox_GBPASSINF_Password";
+			resources->ApplyResources(this->richTextBox_GBPASSINF_Primechanie, L"richTextBox_GBPASSINF_Primechanie");
+			this->richTextBox_GBPASSINF_Primechanie->Name = L"richTextBox_GBPASSINF_Primechanie";
+			// 
+			// label_GBPASSIF_Primechanie
+			// 
+			resources->ApplyResources(this->label_GBPASSIF_Primechanie, L"label_GBPASSIF_Primechanie");
+			this->label_GBPASSIF_Primechanie->Name = L"label_GBPASSIF_Primechanie";
+			// 
+			// textBox_GBPASSINF_Site
+			// 
+			resources->ApplyResources(this->textBox_GBPASSINF_Site, L"textBox_GBPASSINF_Site");
+			this->textBox_GBPASSINF_Site->Name = L"textBox_GBPASSINF_Site";
+			// 
+			// label_GBPASSINF_Site
+			// 
+			resources->ApplyResources(this->label_GBPASSINF_Site, L"label_GBPASSINF_Site");
+			this->label_GBPASSINF_Site->Name = L"label_GBPASSINF_Site";
 			// 
 			// GBPASSINF_button_ShowHidePassword
 			// 
@@ -310,31 +339,10 @@ namespace Kursovaya2 {
 			this->GBPASSINF_button_ShowHidePassword->Name = L"GBPASSINF_button_ShowHidePassword";
 			this->GBPASSINF_button_ShowHidePassword->UseVisualStyleBackColor = true;
 			// 
-			// label_GBPASSINF_Site
+			// textBox_GBPASSINF_Password
 			// 
-			resources->ApplyResources(this->label_GBPASSINF_Site, L"label_GBPASSINF_Site");
-			this->label_GBPASSINF_Site->Name = L"label_GBPASSINF_Site";
-			// 
-			// textBox_GBPASSINF_Site
-			// 
-			resources->ApplyResources(this->textBox_GBPASSINF_Site, L"textBox_GBPASSINF_Site");
-			this->textBox_GBPASSINF_Site->Name = L"textBox_GBPASSINF_Site";
-			// 
-			// label_GBPASSIF_Primechanie
-			// 
-			resources->ApplyResources(this->label_GBPASSIF_Primechanie, L"label_GBPASSIF_Primechanie");
-			this->label_GBPASSIF_Primechanie->Name = L"label_GBPASSIF_Primechanie";
-			// 
-			// richTextBox_GBPASSINF_Primechanie
-			// 
-			resources->ApplyResources(this->richTextBox_GBPASSINF_Primechanie, L"richTextBox_GBPASSINF_Primechanie");
-			this->richTextBox_GBPASSINF_Primechanie->Name = L"richTextBox_GBPASSINF_Primechanie";
-			// 
-			// listBox_PasswordsList
-			// 
-			this->listBox_PasswordsList->FormattingEnabled = true;
-			resources->ApplyResources(this->listBox_PasswordsList, L"listBox_PasswordsList");
-			this->listBox_PasswordsList->Name = L"listBox_PasswordsList";
+			resources->ApplyResources(this->textBox_GBPASSINF_Password, L"textBox_GBPASSINF_Password");
+			this->textBox_GBPASSINF_Password->Name = L"textBox_GBPASSINF_Password";
 			// 
 			// MyForm
 			// 
@@ -365,12 +373,67 @@ namespace Kursovaya2 {
 	
 
 	private: System::Void button_GBREG_CreateMasterPassword_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		StreamWriter^ sw = gcnew StreamWriter("metadata.txt");
+
+		String^ password = textBox_GBREG_CreateMasterPassword->Text;
+
+		int masterpass_hash = 0;
+
+		for (int i = 0; i < password->Length; i++) { masterpass_hash += (int)password[i]; }
+
+		Output_Console->Text = System::Convert::ToString(masterpass_hash);               // DEBUG 
+
+		sw->WriteLine("first_start=false");
+		sw->WriteLine(masterpass_hash);
+		sw->Close();
+
 		textBox_GBREG_CreateMasterPassword->Text = "";
+		GBREG_groupBox_Register->Visible = false;
 		
 
 	}
 
+		   ref class Password_Save 
+		   {
+		   public:
+			   String^ pass_name;
+			   String^ pass_password;
+			   String^ pass_website;
+			   String^ pass_info;
+
+			   
+			   StreamWriter^ pass_w = gcnew StreamWriter("passwords_data.txt");
+
+			   Password_Save(String^ name, String^ password, String^ website, String^ info) 
+			   {
+				   pass_name = name;
+				   pass_password = password;
+				   pass_website = website;
+				   pass_info = info;
+				
+			   };
+
+			   void Write_File() {
+				   pass_w->WriteLine(pass_name);
+				   pass_w->WriteLine(pass_password);
+				   pass_w->WriteLine(pass_website);
+				   pass_w->WriteLine(pass_info);
+				   pass_w->Close();
+			   };
+
+		   };
+
 		   
+private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	Password_Save password_summon_write(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);
+	password_summon_write.Write_File();
+	Output_Console->Text = "Пароль добавлен.";
+	
+
+}
 };
+
 }
 

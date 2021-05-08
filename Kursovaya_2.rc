@@ -60,7 +60,7 @@ IDI_ICON1               ICON                    "icon1.ico"
 // PNG
 //
 
-IDB_PNG1                PNG                     "C:\\Users\\luchi\\Desktop\\key-icon.png"
+
 
 #endif    // Русский (Россия) resources
 /////////////////////////////////////////////////////////////////////////////
