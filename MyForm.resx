@@ -272,6 +272,9 @@
   <data name="GBENT_groupBox_Vhod.Text" xml:space="preserve">
     <value>Войти</value>
   </data>
+  <data name="GBENT_groupBox_Vhod.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;GBENT_groupBox_Vhod.Name" xml:space="preserve">
     <value>GBENT_groupBox_Vhod</value>
   </data>
@@ -614,6 +617,9 @@
   <data name="GBADD_groupBox_AddPassword.Text" xml:space="preserve">
     <value>Добавить новую учетную запись</value>
   </data>
+  <data name="GBADD_groupBox_AddPassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;GBADD_groupBox_AddPassword.Name" xml:space="preserve">
     <value>GBADD_groupBox_AddPassword</value>
   </data>
@@ -625,6 +631,21 @@
   </data>
   <data name="&gt;&gt;GBADD_groupBox_AddPassword.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="listBox_PasswordsList.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listBox_PasswordsList.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="listBox_PasswordsList.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="listBox_PasswordsList.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="listBox_PasswordsList.Items4" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="listBox_PasswordsList.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 16</value>
@@ -658,6 +679,9 @@
   </data>
   <data name="GBPASS_groupBox_Passwords.Text" xml:space="preserve">
     <value>Записи</value>
+  </data>
+  <data name="GBPASS_groupBox_Passwords.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;GBPASS_groupBox_Passwords.Name" xml:space="preserve">
     <value>GBPASS_groupBox_Passwords</value>
@@ -850,6 +874,9 @@
   </data>
   <data name="GBPASSINF_groupBox_PassInfo.Text" xml:space="preserve">
     <value>Сведения</value>
+  </data>
+  <data name="GBPASSINF_groupBox_PassInfo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;GBPASSINF_groupBox_PassInfo.Name" xml:space="preserve">
     <value>GBPASSINF_groupBox_PassInfo</value>
