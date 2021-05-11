@@ -1,4 +1,4 @@
-#include <string>
+
 
 #pragma once
 
@@ -125,8 +125,8 @@ namespace Kursovaya2 {
 	private: System::Windows::Forms::Label^ label_GBPASSINF_Site;
 	private: System::Windows::Forms::Button^ GBPASSINF_button_ShowHidePassword;
 	private: System::Windows::Forms::TextBox^ textBox_GBPASSINF_Password;
-private: System::Windows::Forms::Label^ label1;
-private: System::Windows::Forms::TextBox^ textBox1;
+
+
 
 
 
@@ -175,8 +175,6 @@ private: System::Windows::Forms::TextBox^ textBox1;
 			this->label_GBPASSINF_Site = (gcnew System::Windows::Forms::Label());
 			this->GBPASSINF_button_ShowHidePassword = (gcnew System::Windows::Forms::Button());
 			this->textBox_GBPASSINF_Password = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->GBENT_groupBox_Vhod->SuspendLayout();
 			this->GBREG_groupBox_Register->SuspendLayout();
 			this->GBADD_groupBox_AddPassword->SuspendLayout();
@@ -372,23 +370,10 @@ private: System::Windows::Forms::TextBox^ textBox1;
 			this->textBox_GBPASSINF_Password->Name = L"textBox_GBPASSINF_Password";
 			this->textBox_GBPASSINF_Password->ReadOnly = true;
 			// 
-			// label1
-			// 
-			resources->ApplyResources(this->label1, L"label1");
-			this->label1->Name = L"label1";
-			// 
-			// textBox1
-			// 
-			resources->ApplyResources(this->textBox1, L"textBox1");
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			// 
 			// MyForm
 			// 
 			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->GBPASSINF_groupBox_PassInfo);
 			this->Controls->Add(this->Output_Console);
 			this->Controls->Add(this->GBPASS_groupBox_Passwords);
@@ -407,7 +392,6 @@ private: System::Windows::Forms::TextBox^ textBox1;
 			this->GBPASSINF_groupBox_PassInfo->ResumeLayout(false);
 			this->GBPASSINF_groupBox_PassInfo->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -471,6 +455,10 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 	//listBox_PasswordsList->Items->Add(textBox_GBADD_Nazvanie->Text); DEBUG
 	//Output_Console->Text = System::Convert::ToString(listBox_PasswordsList->SelectedItem); DEBUG
 	Output_Console->Text = "ѕароль добавлен.";
+	textBox_GBADD_Nazvanie->Text = "";
+	textBox_GBADD_Password->Text = "";
+	textBox_GBADD_Site->Text = "";
+	richTextBox_GBADD_Primechanie->Text = "";
 
 	Password_Read pass_repeat_initialize(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);//ѕовторна€ загрузка списка паролей 
 	pass_repeat_initialize.Read_Collection(listBox_PasswordsList);																									//при добавлении нового
