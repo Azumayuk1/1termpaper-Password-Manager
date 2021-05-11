@@ -341,6 +341,7 @@ private: System::Windows::Forms::TextBox^ textBox1;
 			// 
 			resources->ApplyResources(this->richTextBox_GBPASSINF_Primechanie, L"richTextBox_GBPASSINF_Primechanie");
 			this->richTextBox_GBPASSINF_Primechanie->Name = L"richTextBox_GBPASSINF_Primechanie";
+			this->richTextBox_GBPASSINF_Primechanie->ReadOnly = true;
 			// 
 			// label_GBPASSIF_Primechanie
 			// 
@@ -351,6 +352,7 @@ private: System::Windows::Forms::TextBox^ textBox1;
 			// 
 			resources->ApplyResources(this->textBox_GBPASSINF_Site, L"textBox_GBPASSINF_Site");
 			this->textBox_GBPASSINF_Site->Name = L"textBox_GBPASSINF_Site";
+			this->textBox_GBPASSINF_Site->ReadOnly = true;
 			// 
 			// label_GBPASSINF_Site
 			// 
@@ -368,6 +370,7 @@ private: System::Windows::Forms::TextBox^ textBox1;
 			// 
 			resources->ApplyResources(this->textBox_GBPASSINF_Password, L"textBox_GBPASSINF_Password");
 			this->textBox_GBPASSINF_Password->Name = L"textBox_GBPASSINF_Password";
+			this->textBox_GBPASSINF_Password->ReadOnly = true;
 			// 
 			// label1
 			// 
@@ -510,19 +513,26 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 		   {
 			   String^ SelectedItem = System::Convert::ToString(_listBox->SelectedItem);
 
-			   while (pass_r->ReadLine() != nullptr) 
+			   while (pass_r->ReadLine() != nullptr) //#
 			   {
 				    
-				   if (pass_r->ReadLine() == SelectedItem) {
-					   password->Text = pass_r->ReadLine();
-					   website->Text = pass_r->ReadLine();
-					   addition->Text = pass_r->ReadLine();
-					   pass_r->Close();
+				   if (pass_r->ReadLine() == SelectedItem) { // Nazvanie
+					   password->Text = pass_r->ReadLine(); //Password
+					   website->Text = pass_r->ReadLine();	//Website address
+					   addition->Text = pass_r->ReadLine(); //Addition
+					   
 					   break;
+				   }
+				   else if (pass_r->ReadLine() != SelectedItem) {
+					   pass_r->ReadLine();
+					   pass_r->ReadLine();
+					   pass_r->ReadLine();
 				   }
 
 			   }
-		   
+			   pass_r->Close();
+
+
 		   };
 	   };
 private: System::Void btn_GBENT_Voiti_Click(System::Object^ sender, System::EventArgs^ e) { // Вход в программу
@@ -532,14 +542,13 @@ private: System::Void btn_GBENT_Voiti_Click(System::Object^ sender, System::Even
 	{																								   // мастер-пароля, вход считается успешным
 		sr->Close();
 		Successful_Entry();
-		//Password_Read pass_CheckIfEmpty(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);
+		
 
 
 		Password_Read pass_initialize(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);
-		//if (pass_CheckIfEmpty.pass_r->ReadLine()!=nullptr) {
-		//	pass_CheckIfEmpty.pass_r->Close();
+		
 			pass_initialize.Read_Collection(listBox_PasswordsList); // Первичное считывание паролей при запуске программы
-		//}
+		
 	}
 	else { Output_Console->Text = "Неправильный пароль. Повторите попытку."; };
 }
