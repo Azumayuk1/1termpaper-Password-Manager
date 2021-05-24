@@ -401,7 +401,7 @@ namespace Kursovaya2 {
 	private: System::Void button_GBREG_CreateMasterPassword_Click(System::Object^ sender, System::EventArgs^ e) {
 		
 		StreamWriter^ sw = gcnew StreamWriter("metadata.txt");
-
+		StreamWriter^ sd = gcnew StreamWriter("passwords_data.txt");
 		String^ password = textBox_GBREG_CreateMasterPassword->Text;
 
 		//Output_Console->Text = System::Convert::ToString(Generate_Hash(password));               // DEBUG, проверка генерации хэша
@@ -481,7 +481,7 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 			   pass_info = info;
 		   };
 
-		   void Read_Collection(System::Windows::Forms::ListBox^ listBox)//Функция считывет названия паролей из файла и записывает в коллекцию listBox
+		   void Read_Collection(System::Windows::Forms::ListBox^ listBox)//Метод считывет названия паролей из файла и записывает в коллекцию listBox
 		   {
 			listBox->Items->Clear();
 			
@@ -498,20 +498,20 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 		   };
 
 		   void Get_Selected_Password(System::Windows::Forms::ListBox^ _listBox, System::Windows::Forms::TextBox^ password, System::Windows::Forms::TextBox^ website, System::Windows::Forms::RichTextBox^ addition)
-		   {
-			   String^ SelectedItem = System::Convert::ToString(_listBox->SelectedItem);
+		   {//Метод считывает нужный пароль из файла
+			   
 
 			   while (pass_r->ReadLine() != nullptr) //#
 			   {
-				    
-				   if (pass_r->ReadLine() == SelectedItem) { // Nazvanie
+				    // Если название пароля следующего после решетки подходит, то его данные выводятся на экран
+				   if (pass_r->ReadLine() == System::Convert::ToString(_listBox->SelectedItem)) { // Nazvanie
 					   password->Text = pass_r->ReadLine(); //Password
 					   website->Text = pass_r->ReadLine();	//Website address
 					   addition->Text = pass_r->ReadLine(); //Addition
 					   
 					   break;
-				   }
-				   else if (pass_r->ReadLine() != SelectedItem) {
+				   }//если не подходит - программа продолжает считывание
+				   else  {
 					   pass_r->ReadLine();
 					   pass_r->ReadLine();
 					   pass_r->ReadLine();
