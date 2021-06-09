@@ -1,5 +1,3 @@
-
-
 #pragma once
 
 namespace Kursovaya2 {
@@ -15,29 +13,25 @@ namespace Kursovaya2 {
 	using namespace System::IO;
 
 	
-
-	/// <summary>
-	/// Сводка для MyForm
-	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
 		MyForm(void)
 		{
 			InitializeComponent();
-			if (File::Exists("metadata.txt")==true) //Проверяет наличие файла, определяет первый ли запуск
+			if (File::Exists("metadata.txt")==true) 
 			{
 				Enter_Procedure();
 			};
 		}
 
-		void Enter_Procedure() //Запускает процедуру входа в программу
+		void Enter_Procedure() 
 		{
 			GBENT_groupBox_Vhod->Visible = true;
 			GBREG_groupBox_Register->Visible = false;
 		};
 
-		int Generate_Hash(String^ seed) //Генерирует хэш введенной строки, складывая номера кодов символов строки
+		int Generate_Hash(String^ seed) 
 		{
 			int hash = 0;
 			for (int i = 0; i < seed->Length; i++) 
@@ -47,7 +41,7 @@ namespace Kursovaya2 {
 			return hash;
 		};
 
-		void Successful_Entry() //Вызывается при успешном входе в программу
+		void Successful_Entry() 
 		{
 			GBENT_groupBox_Vhod->Visible = false;
 			GBADD_groupBox_AddPassword->Visible = true;
@@ -57,9 +51,7 @@ namespace Kursovaya2 {
 		};
 
 	protected:
-		/// <summary>
-		/// Освободить все используемые ресурсы. Деструктор.
-		/// </summary>
+		
 		~MyForm()
 		{
 			if (components)
@@ -133,9 +125,7 @@ namespace Kursovaya2 {
 
 
 	private:
-		/// <summary>
-		/// Обязательная переменная конструктора.
-		/// </summary>
+		
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
@@ -404,9 +394,9 @@ namespace Kursovaya2 {
 		StreamWriter^ sd = gcnew StreamWriter("passwords_data.txt");
 		String^ password = textBox_GBREG_CreateMasterPassword->Text;
 
-		//Output_Console->Text = System::Convert::ToString(Generate_Hash(password));               // DEBUG, проверка генерации хэша
+		
 
-		sw->WriteLine(Generate_Hash(password)); // Записывает полученный из формы хэш в файл metadata.txt
+		sw->WriteLine(Generate_Hash(password)); 
 		sw->Close();
 		GBREG_groupBox_Register->Visible = false;
 
@@ -414,7 +404,7 @@ namespace Kursovaya2 {
 		
 	}
 
-		   ref class Password_Save // Класс отвечает за запись новых паролей в текстовый файл passwords_data.txt
+		   ref class Password_Save 
 		   {
 		   public:
 			   String^ pass_name;
@@ -425,7 +415,7 @@ namespace Kursovaya2 {
 			   
 			   StreamWriter^ pass_w = gcnew StreamWriter("passwords_data.txt", true);
 
-			   Password_Save(String^ name, String^ password, String^ website, String^ info) //Constructor
+			   Password_Save(String^ name, String^ password, String^ website, String^ info) 
 			   {
 				   pass_name = name;
 				   pass_password = password;
@@ -434,7 +424,7 @@ namespace Kursovaya2 {
 				
 			   };
 
-			   void Write_File() { // Метод отвечает за запись паролей в файл
+			   void Write_File() { 
 				   pass_w->WriteLine("#");
 				   pass_w->WriteLine(pass_name);
 				   pass_w->WriteLine(pass_password);
@@ -452,8 +442,7 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 	Password_Save password_summon_write(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);
 	password_summon_write.Write_File();
 
-	//listBox_PasswordsList->Items->Add(textBox_GBADD_Nazvanie->Text); DEBUG
-	//Output_Console->Text = System::Convert::ToString(listBox_PasswordsList->SelectedItem); DEBUG
+	
 	Output_Console->Text = "Пароль добавлен.";
 	textBox_GBADD_Nazvanie->Text = "";
 	textBox_GBADD_Password->Text = "";
@@ -465,7 +454,7 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 	
 
 }
-	   ref class Password_Read { // Класс отвечает за чтение паролей из файла, их появление в списке
+	   ref class Password_Read { 
 	   public:
 		   String^ pass_name;
 		   String^ pass_password;
@@ -481,7 +470,7 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 			   pass_info = info;
 		   };
 
-		   void Read_Collection(System::Windows::Forms::ListBox^ listBox)//Метод считывет названия паролей из файла и записывает в коллекцию listBox
+		   void Read_Collection(System::Windows::Forms::ListBox^ listBox)
 		   {
 			listBox->Items->Clear();
 			
@@ -498,19 +487,19 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 		   };
 
 		   void Get_Selected_Password(System::Windows::Forms::ListBox^ _listBox, System::Windows::Forms::TextBox^ password, System::Windows::Forms::TextBox^ website, System::Windows::Forms::RichTextBox^ addition)
-		   {//Метод считывает нужный пароль из файла
+		   {
 			   
 
-			   while (pass_r->ReadLine() != nullptr) //#
+			   while (pass_r->ReadLine() != nullptr) 
 			   {
-				    // Если название пароля следующего после решетки подходит, то его данные выводятся на экран
-				   if (pass_r->ReadLine() == System::Convert::ToString(_listBox->SelectedItem)) { // Nazvanie
-					   password->Text = pass_r->ReadLine(); //Password
-					   website->Text = pass_r->ReadLine();	//Website address
-					   addition->Text = pass_r->ReadLine(); //Addition
+				    
+				   if (pass_r->ReadLine() == System::Convert::ToString(_listBox->SelectedItem)) { 
+					   password->Text = pass_r->ReadLine(); 
+					   website->Text = pass_r->ReadLine();	
+					   addition->Text = pass_r->ReadLine(); 
 					   
 					   break;
-				   }//если не подходит - программа продолжает считывание
+				   }
 				   else  {
 					   pass_r->ReadLine();
 					   pass_r->ReadLine();
@@ -523,25 +512,24 @@ private: System::Void button_GBADD_AddPassword_Click(System::Object^ sender, Sys
 
 		   };
 	   };
-private: System::Void btn_GBENT_Voiti_Click(System::Object^ sender, System::EventArgs^ e) { // Вход в программу
+private: System::Void btn_GBENT_Voiti_Click(System::Object^ sender, System::EventArgs^ e) { 
 	StreamReader^ sr = gcnew StreamReader("metadata.txt");
 	
-	if (Generate_Hash(textBox_GBENT_MasterPassword->Text) == System::Convert::ToInt32(sr->ReadLine())) // Если хэш введенного пароля совпадает с хэшем 
-	{																								   // мастер-пароля, вход считается успешным
-		sr->Close();
+	if (Generate_Hash(textBox_GBENT_MasterPassword->Text) == System::Convert::ToInt32(sr->ReadLine()))  
+	{																								   
 		Successful_Entry();
 		
 
 
 		Password_Read pass_initialize(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);
 		
-			pass_initialize.Read_Collection(listBox_PasswordsList); // Первичное считывание паролей при запуске программы
+			pass_initialize.Read_Collection(listBox_PasswordsList); 
 		
 	}
 	else { Output_Console->Text = "Неправильный пароль. Повторите попытку."; };
 }
 
-private: System::Void GBPASSINF_button_ShowHidePassword_Click(System::Object^ sender, System::EventArgs^ e) { // Показывает выбранный пароль на экран
+private: System::Void GBPASSINF_button_ShowHidePassword_Click(System::Object^ sender, System::EventArgs^ e) { 
 	Password_Read Show_Password_Data(textBox_GBADD_Nazvanie->Text, textBox_GBADD_Password->Text, textBox_GBADD_Site->Text, richTextBox_GBADD_Primechanie->Text);
 	Show_Password_Data.Get_Selected_Password(listBox_PasswordsList, textBox_GBPASSINF_Password, textBox_GBPASSINF_Site, richTextBox_GBPASSINF_Primechanie);
 
