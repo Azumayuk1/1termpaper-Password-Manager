@@ -1,3 +1,3 @@
-# Kursovaya
-Курсовая работа по ТП студента БСБО-16-20. Первый курс 2020-2021
+# 1st year term paper
+First year term paper - simple password management app. 2020-2021.
 
